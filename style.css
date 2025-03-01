@@ -116,6 +116,10 @@ body{
 
     border-radius: 5px;
     transition: all 0.3s ease;
+    animation-name: moveInLeft;
+   animation-duration: 1s;
+   animation-timing-function: ease-in-out;
+    
 }
 
 .cta-button.primary{
@@ -127,4 +131,27 @@ body{
     background-color: transparent;
     border: 2px solid white;
     color: white;
+}
+
+.cta-button:hover{
+   
+    transform: translateY(-5px);
+}
+
+@keyframes moveInLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    40%{
+        opacity: 0.5;
+        transform: translateY(-20px);
+    }
+    80%{
+        transform: translateX(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0) translateY(0);
+    }
 }
