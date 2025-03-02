@@ -19,6 +19,7 @@ body{
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
+    scroll-behavior: smooth;
 
 }
 .navbar{
@@ -70,7 +71,7 @@ body{
 
 
 .hero{
-    height: 100vh;
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,6 +79,7 @@ body{
     position: relative;
     background: url("./images/getty_1169660398_c3xndp.webp") center/cover no-repeat;
     color: white;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
 
 .hero-ovelay{
@@ -154,4 +156,155 @@ body{
         opacity: 1;
         transform: translateX(0) translateY(0);
     }
+}
+
+.section-header{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+.section-header h2{
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+.section-header p{
+    font-size: 1.1rem;
+    color: #6b7280;
+    font-weight: 400;
+}
+.features{
+    padding: 8rem 1rem;
+background-color: white;}
+
+.features-grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0rem 1rem;
+}
+.features-card{
+    background-color: var(--card-background);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+    flex: 1 1 250px;
+}
+
+.features-card:hover{
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+.about{
+    padding: 8rem 3rem;
+    background-color: var(--card-background);
+}
+.about-grid{
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 4rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    justify-content: space-between;
+}
+.about-features{
+    list-style: none;
+    margin-top: 2rem;
+}
+.about-features li{
+  display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+.about-features i{
+    color: var(--primary-color);
+}
+
+.about-stats{
+    display: flex;
+    gap: 2rem;
+   text-align: center;
+   flex-wrap: wrap;
+}
+.stat-item h4{
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.team{
+    padding: 8rem 1rem;
+    background-color: white;
+}
+.team-grid{
+    display: flex;
+    gap: 3rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    flex-wrap: wrap;
+   
+}
+
+.team-member{
+    background-color: var(--card-background);
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+    flex: 1 1 250px;
+    overflow: hidden;
+}
+.team-member:hover{
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+.member-image{
+    height: 300px;
+    overflow: hidden;
+    width: 100%;
+}
+.member-image img{
+    width: 100%;
+    height: 120%;
+    object-fit: cover ;
+
+   
+}
+.team-member h3{
+    
+    margin: 1rem 0 0.5rem;
+    color: var(--text-color);
+}
+.team-member .role{
+    color:var(--primary-color);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.team-member .bio{
+    padding: 0 1rem;
+    color: #6b7280;
+    margin-bottom: 1rem;
+}
+
+.social-links{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+
+}
+.social-links a{
+    color: #6b7280;
+   
+    transition: all 0.3s ease;
+}
+.social-links a:hover{
+    color: var(--primary-color);
 }
